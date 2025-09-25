@@ -1,0 +1,50 @@
+.notifications-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Conteneur principal des cartes */
+.notifications-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;   /* centre verticalement */
+  gap: 4rem;             /* espace entre les cartes */
+  height: calc(100vh - 200px); /* prend toute la hauteur dispo moins le header */
+}
+
+/* Style de chaque carte */
+.notification-card {
+  width: 310px;
+  height: 310px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.notification-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.18);
+}
+
+/* Image dans la carte */
+.notification-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+/* Titre */
+.notification-title {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  color: #2EC4B6;
+  font-size: 1.3rem;
+  text-align: center;
+}

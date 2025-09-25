@@ -1,0 +1,160 @@
+:root {
+  --primary-green: #4ECDC4;
+  --text-dark: #2d3748;
+  --text-light: #718096;
+  --input-border: #e2e8f0;
+  --background-light: #f7fafc;
+}
+
+/* Layout général */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #4ECDC4 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.logo-image {
+  width: 150px !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto 20px auto !important;
+}
+
+.navigation {
+  display: flex !important;
+  flex-direction: column !important;
+  margin-top: 1rem !important;
+}
+
+.nav-button {
+  padding: 1rem 2rem;
+  border: none ;
+  background: none;
+  color: #fff ;
+  text-align: left ;
+  cursor: pointer ;
+  font-size: 1rem ;
+}
+
+.nav-button:hover {
+  background-color: #ffffff4e !important;
+  width: 202px;
+
+}
+
+.nav-button.active {
+  width: 202px;
+  background-color: #ffffff !important;
+  color: #4ECDC4 !important;
+}
+
+.nav-button.logout {
+  margin-top: auto ;
+  background-color: #E53E3E ;
+  text-align: center ;
+  font-weight: bold;
+}
+
+.nav-button.logout:hover {
+  background-color: #C53030;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.welcome-title-dashboard {
+  color: var(--primary-green);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Section des cartes */
+.cards-grid {
+  height: 541px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2.5rem 2rem; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1px solid var(--input-border);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-image {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.card-title {
+  color: var(--primary-green); 
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Floating menu */
+.floating-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white !important;
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.floating-menu-item {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.floating-menu-item:hover {
+  background-color: rgba(255,255,255,0.1);
+}

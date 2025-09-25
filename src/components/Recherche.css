@@ -1,0 +1,156 @@
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background-light);
+}
+
+.logo-dashboard {
+  color: white;
+}
+
+.logo-text-dashboard {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  margin-bottom: -0.3rem;
+}
+
+.logo-subtitle-dashboard {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.nav-button {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-button.active {
+  background-color: white;
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+.nav-button.logout {
+  margin-top: auto;
+}
+
+.nav-button.logout:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.welcome-title-dashboard {
+  color: var(--primary-green);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Section des cartes */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2.5rem 2rem; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1px solid var(--input-border);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-image {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.card-title {
+  color: var(--primary-green); 
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Floating menu */
+.floating-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--primary-green);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.floating-menu-item {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.floating-menu-item:hover {
+  background-color: rgba(255,255,255,0.1);
+}
